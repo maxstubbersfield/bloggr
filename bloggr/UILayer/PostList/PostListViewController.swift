@@ -7,12 +7,18 @@
 
 import UIKit
 
-protocol PostListViewControllerDependencies: PostListUseCase {
+protocol PostListViewControllerDependencies: PostListUseCase, SetSelectedPostUseCase {
+}
+
+protocol PostListViewControllerDelegate: AnyObject {
+    func postListViewControllerDidSelectPost(_ postListViewController: PostListViewController)
 }
 
 final class PostListViewController: UIViewController {
     
     private let dependencies: PostListViewControllerDependencies
+    weak var delegate: PostListViewControllerDelegate?
+    
     private var posts = [Post]()
     
     @IBOutlet weak var tableView: UITableView! {
@@ -68,7 +74,12 @@ extension PostListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // TODO: Handle selection of Post
+        guard let post = posts[safe: indexPath.row] else {
+            return
+        }
+        
+        dependencies.setSelectedPost(post)
+        delegate?.postListViewControllerDidSelectPost(self)
     }
 }
 

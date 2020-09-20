@@ -21,3 +21,9 @@ extension AppDependencies: PostListUseCase {
         postInteractor.fetchPosts(completion: completion)
     }
 }
+
+extension AppDependencies: SetSelectedPostUseCase {
+    func setSelectedPost(_ post: Post?) {
+        postInteractor.setSelectedPost(post)
+    }
+}
