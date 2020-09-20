@@ -23,6 +23,9 @@
 		845357542517C54F00A2DE15 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845357532517C54F00A2DE15 /* AppDependencies.swift */; };
 		8453575D2517C61300A2DE15 /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453575C2517C61300A2DE15 /* PostInteractor.swift */; };
 		845357632517C80F00A2DE15 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845357622517C80F00A2DE15 /* AppCoordinator.swift */; };
+		8453576E2517CDEB00A2DE15 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453576D2517CDEB00A2DE15 /* PostListCell.swift */; };
+		845357732517CDFA00A2DE15 /* PostListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845357722517CDFA00A2DE15 /* PostListCell.xib */; };
+		845357792517CF2E00A2DE15 /* UITableView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845357782517CF2E00A2DE15 /* UITableView+Util.swift */; };
 		84C3138625178BB200A1FFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3138525178BB200A1FFB2 /* AppDelegate.swift */; };
 		84C3138825178BB200A1FFB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3138725178BB200A1FFB2 /* SceneDelegate.swift */; };
 		84C3138A25178BB200A1FFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3138925178BB200A1FFB2 /* ViewController.swift */; };
@@ -67,6 +70,9 @@
 		845357532517C54F00A2DE15 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		8453575C2517C61300A2DE15 /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
 		845357622517C80F00A2DE15 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8453576D2517CDEB00A2DE15 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
+		845357722517CDFA00A2DE15 /* PostListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListCell.xib; sourceTree = "<group>"; };
+		845357782517CF2E00A2DE15 /* UITableView+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Util.swift"; sourceTree = "<group>"; };
 		84C3138225178BB200A1FFB2 /* bloggr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bloggr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3138525178BB200A1FFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C3138725178BB200A1FFB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 		845356C125179CD600A2DE15 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				845357772517CF1000A2DE15 /* Extensions */,
 				845357612517C7FB00A2DE15 /* Coordinator */,
 				845357522517C53E00A2DE15 /* AppDependencies */,
 				845357512517C53300A2DE15 /* AppDelegate */,
@@ -190,6 +197,8 @@
 			children = (
 				8453573E2517BF3400A2DE15 /* PostListViewController.swift */,
 				845357432517BF4200A2DE15 /* PostListViewController.xib */,
+				8453576D2517CDEB00A2DE15 /* PostListCell.swift */,
+				845357722517CDFA00A2DE15 /* PostListCell.xib */,
 			);
 			path = PostList;
 			sourceTree = "<group>";
@@ -232,6 +241,14 @@
 				845357622517C80F00A2DE15 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		845357772517CF1000A2DE15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				845357782517CF2E00A2DE15 /* UITableView+Util.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		84C3137925178BB200A1FFB2 = {
@@ -393,6 +410,7 @@
 			files = (
 				845357442517BF4200A2DE15 /* PostListViewController.xib in Resources */,
 				84C3139225178BB300A1FFB2 /* LaunchScreen.storyboard in Resources */,
+				845357732517CDFA00A2DE15 /* PostListCell.xib in Resources */,
 				84C3138F25178BB300A1FFB2 /* Assets.xcassets in Resources */,
 				84C3138D25178BB200A1FFB2 /* Main.storyboard in Resources */,
 			);
@@ -426,6 +444,8 @@
 				845357122517B4C900A2DE15 /* Post.swift in Sources */,
 				845357092517B48500A2DE15 /* PostListProviderProtocol.swift in Sources */,
 				845357632517C80F00A2DE15 /* AppCoordinator.swift in Sources */,
+				845357792517CF2E00A2DE15 /* UITableView+Util.swift in Sources */,
+				8453576E2517CDEB00A2DE15 /* PostListCell.swift in Sources */,
 				8453571D2517B6B700A2DE15 /* PostResponse.swift in Sources */,
 				8453575D2517C61300A2DE15 /* PostInteractor.swift in Sources */,
 				84C3138625178BB200A1FFB2 /* AppDelegate.swift in Sources */,
