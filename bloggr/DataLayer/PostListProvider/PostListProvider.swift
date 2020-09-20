@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PostListProvider {
+final class PostListProvider: PostListProviderProtocol {
     
     private let network: Network
     private let endpoint = "https://jsonplaceholder.typicode.com/posts"
@@ -16,7 +16,7 @@ final class PostListProvider {
         self.network = network
     }
     
-    func fetchPostList(completion: @escaping (Result<[PostResponse], Error>) -> Void) {
+    func fetchPostList(completion: @escaping (Result<[Post], Error>) -> Void) {
         guard let url = URL(string: endpoint) else {
             return // TODO: Add error handling
         }
@@ -24,7 +24,8 @@ final class PostListProvider {
             switch result {
             case .success(let data):
                 do {
-                    let posts = try JSONDecoder().decode([PostResponse].self, from: data)
+                    let postListResponse = try JSONDecoder().decode([PostResponse].self, from: data)
+                    let posts = postListResponse.map { $0.asPost }
                     completion(.success(posts))
                 } catch {
                     completion(.failure(error))
