@@ -14,3 +14,9 @@ struct CommentResponse: Decodable {
     let email: String
     let body: String
 }
+
+extension CommentResponse {
+    var asComment: Comment {
+        Comment(postId: postId, id: id, name: name, email: email, body: body)
+    }
+}
