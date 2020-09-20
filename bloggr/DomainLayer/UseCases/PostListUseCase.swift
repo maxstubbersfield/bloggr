@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PostListUseCase {
-    func fetch(completion: @escaping (Result<[Post], Error>) -> Void)
+    func fetchPosts(completion: @escaping (Result<[Post], Error>) -> Void)
 }

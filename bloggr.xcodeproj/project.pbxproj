@@ -20,6 +20,9 @@
 		8453573F2517BF3400A2DE15 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453573E2517BF3400A2DE15 /* PostListViewController.swift */; };
 		845357442517BF4200A2DE15 /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845357432517BF4200A2DE15 /* PostListViewController.xib */; };
 		8453574A2517BFF900A2DE15 /* PostListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845357492517BFF900A2DE15 /* PostListUseCase.swift */; };
+		845357542517C54F00A2DE15 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845357532517C54F00A2DE15 /* AppDependencies.swift */; };
+		8453575D2517C61300A2DE15 /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453575C2517C61300A2DE15 /* PostInteractor.swift */; };
+		845357632517C80F00A2DE15 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845357622517C80F00A2DE15 /* AppCoordinator.swift */; };
 		84C3138625178BB200A1FFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3138525178BB200A1FFB2 /* AppDelegate.swift */; };
 		84C3138825178BB200A1FFB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3138725178BB200A1FFB2 /* SceneDelegate.swift */; };
 		84C3138A25178BB200A1FFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3138925178BB200A1FFB2 /* ViewController.swift */; };
@@ -61,6 +64,9 @@
 		8453573E2517BF3400A2DE15 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		845357432517BF4200A2DE15 /* PostListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewController.xib; sourceTree = "<group>"; };
 		845357492517BFF900A2DE15 /* PostListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListUseCase.swift; sourceTree = "<group>"; };
+		845357532517C54F00A2DE15 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		8453575C2517C61300A2DE15 /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
+		845357622517C80F00A2DE15 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		84C3138225178BB200A1FFB2 /* bloggr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bloggr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3138525178BB200A1FFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C3138725178BB200A1FFB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		845356C025179CCF00A2DE15 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8453575B2517C60700A2DE15 /* Interactors */,
 				845357482517BFE400A2DE15 /* UseCases */,
 				845357102517B4C000A2DE15 /* Models */,
 				845357072517B46F00A2DE15 /* ProviderProtocols */,
@@ -125,6 +132,9 @@
 		845356C125179CD600A2DE15 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				845357612517C7FB00A2DE15 /* Coordinator */,
+				845357522517C53E00A2DE15 /* AppDependencies */,
+				845357512517C53300A2DE15 /* AppDelegate */,
 				8453573D2517BEB800A2DE15 /* PostList */,
 			);
 			path = UILayer;
@@ -192,6 +202,38 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		845357512517C53300A2DE15 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84C3138525178BB200A1FFB2 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		845357522517C53E00A2DE15 /* AppDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				845357532517C54F00A2DE15 /* AppDependencies.swift */,
+			);
+			path = AppDependencies;
+			sourceTree = "<group>";
+		};
+		8453575B2517C60700A2DE15 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				8453575C2517C61300A2DE15 /* PostInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		845357612517C7FB00A2DE15 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				845357622517C80F00A2DE15 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		84C3137925178BB200A1FFB2 = {
 			isa = PBXGroup;
 			children = (
@@ -218,7 +260,6 @@
 				845356BF25179CB300A2DE15 /* DataLayer */,
 				845356C025179CCF00A2DE15 /* DomainLayer */,
 				845356C125179CD600A2DE15 /* UILayer */,
-				84C3138525178BB200A1FFB2 /* AppDelegate.swift */,
 				84C3138725178BB200A1FFB2 /* SceneDelegate.swift */,
 				84C3138925178BB200A1FFB2 /* ViewController.swift */,
 				84C3138B25178BB200A1FFB2 /* Main.storyboard */,
@@ -384,8 +425,11 @@
 				8453574A2517BFF900A2DE15 /* PostListUseCase.swift in Sources */,
 				845357122517B4C900A2DE15 /* Post.swift in Sources */,
 				845357092517B48500A2DE15 /* PostListProviderProtocol.swift in Sources */,
+				845357632517C80F00A2DE15 /* AppCoordinator.swift in Sources */,
 				8453571D2517B6B700A2DE15 /* PostResponse.swift in Sources */,
+				8453575D2517C61300A2DE15 /* PostInteractor.swift in Sources */,
 				84C3138625178BB200A1FFB2 /* AppDelegate.swift in Sources */,
+				845357542517C54F00A2DE15 /* AppDependencies.swift in Sources */,
 				845356E12517AD3800A2DE15 /* NetworkProtocol.swift in Sources */,
 				845356EC2517AEA900A2DE15 /* CommentsProvider.swift in Sources */,
 				845357382517BC9600A2DE15 /* Comment.swift in Sources */,

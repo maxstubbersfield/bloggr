@@ -32,7 +32,7 @@ final class PostListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dependencies.fetch { [weak self] result in
+        dependencies.fetchPosts { [weak self] result in
             switch result {
             case .success(let posts):
                 self?.posts = posts
