@@ -143,6 +143,7 @@
 				845357522517C53E00A2DE15 /* AppDependencies */,
 				845357512517C53300A2DE15 /* AppDelegate */,
 				8453573D2517BEB800A2DE15 /* PostList */,
+				845357882517D74600A2DE15 /* PostDetail */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -250,6 +251,13 @@
 				845357782517CF2E00A2DE15 /* UITableView+Util.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		845357882517D74600A2DE15 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostDetail;
 			sourceTree = "<group>";
 		};
 		84C3137925178BB200A1FFB2 = {
