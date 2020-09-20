@@ -88,8 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				845356DC2517AD2A00A2DE15 /* Network */,
-				845356CA2517A08900A2DE15 /* PostListProvider.swift */,
-				845356D42517A88F00A2DE15 /* PostResponse.swift */,
+				845356E62517AE2B00A2DE15 /* PostListProvider */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -115,6 +114,15 @@
 				845356E02517AD3800A2DE15 /* NetworkProtocol.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		845356E62517AE2B00A2DE15 /* PostListProvider */ = {
+			isa = PBXGroup;
+			children = (
+				845356CA2517A08900A2DE15 /* PostListProvider.swift */,
+				845356D42517A88F00A2DE15 /* PostResponse.swift */,
+			);
+			path = PostListProvider;
 			sourceTree = "<group>";
 		};
 		84C3137925178BB200A1FFB2 = {
