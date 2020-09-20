@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AppCoordinatorDependencies: PostListViewControllerDependencies {
+protocol AppCoordinatorDependencies: PostListViewControllerDependencies, PostDetailViewControllerDependencies {
 }
 
 final class AppCoordinator {
@@ -28,6 +28,7 @@ final class AppCoordinator {
 
 extension AppCoordinator: PostListViewControllerDelegate {
     func postListViewControllerDidSelectPost(_ postListViewController: PostListViewController) {
-        // TODO: Show detail screen
+        let postDetailViewController = PostDetailViewController(dependencies: dependencies)
+        navigationController.pushViewController(postDetailViewController, animated: true)
     }
 }

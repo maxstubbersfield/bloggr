@@ -13,7 +13,9 @@ final class AppDependencies: AppCoordinatorDependencies {
     let network = Network()
     lazy var postListProvider: PostListProviderProtocol = PostListProvider(network: network)
     
-    lazy var postInteractor = PostInteractor(postListProvider: postListProvider)
+    lazy var commentsProvider: CommentsProviderProtocol = CommentsProvider(network: network)
+    
+    lazy var postInteractor = PostInteractor(postListProvider: postListProvider, commentsProvider: commentsProvider)
 }
 
 extension AppDependencies: PostListUseCase {
@@ -25,5 +27,10 @@ extension AppDependencies: PostListUseCase {
 extension AppDependencies: SetSelectedPostUseCase {
     func setSelectedPost(_ post: Post?) {
         postInteractor.setSelectedPost(post)
+    }
+}
+extension AppDependencies: PostDetailUseCase {
+    func fetchPostDetail(completion: @escaping (Result<PostDetailed, Error>) -> Void) {
+        postInteractor.fetchPostDetail(completion: completion)
     }
 }

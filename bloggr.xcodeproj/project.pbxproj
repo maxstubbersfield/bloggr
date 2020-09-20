@@ -27,6 +27,10 @@
 		845357732517CDFA00A2DE15 /* PostListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845357722517CDFA00A2DE15 /* PostListCell.xib */; };
 		845357792517CF2E00A2DE15 /* UITableView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845357782517CF2E00A2DE15 /* UITableView+Util.swift */; };
 		845357812517D43B00A2DE15 /* SetSelectedPostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845357802517D43B00A2DE15 /* SetSelectedPostUseCase.swift */; };
+		8453578D2517D79A00A2DE15 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453578C2517D79A00A2DE15 /* PostDetailViewController.swift */; };
+		845357922517D7A700A2DE15 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845357912517D7A700A2DE15 /* PostDetailViewController.xib */; };
+		845357972517D87B00A2DE15 /* PostDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845357962517D87B00A2DE15 /* PostDetailed.swift */; };
+		8453579F2517D93F00A2DE15 /* PostDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453579E2517D93F00A2DE15 /* PostDetailUseCase.swift */; };
 		84C3138625178BB200A1FFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3138525178BB200A1FFB2 /* AppDelegate.swift */; };
 		84C3138825178BB200A1FFB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3138725178BB200A1FFB2 /* SceneDelegate.swift */; };
 		84C3138D25178BB200A1FFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C3138B25178BB200A1FFB2 /* Main.storyboard */; };
@@ -74,6 +78,10 @@
 		845357722517CDFA00A2DE15 /* PostListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListCell.xib; sourceTree = "<group>"; };
 		845357782517CF2E00A2DE15 /* UITableView+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Util.swift"; sourceTree = "<group>"; };
 		845357802517D43B00A2DE15 /* SetSelectedPostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSelectedPostUseCase.swift; sourceTree = "<group>"; };
+		8453578C2517D79A00A2DE15 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		845357912517D7A700A2DE15 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
+		845357962517D87B00A2DE15 /* PostDetailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailed.swift; sourceTree = "<group>"; };
+		8453579E2517D93F00A2DE15 /* PostDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailUseCase.swift; sourceTree = "<group>"; };
 		84C3138225178BB200A1FFB2 /* bloggr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bloggr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3138525178BB200A1FFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C3138725178BB200A1FFB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +197,7 @@
 			children = (
 				845357112517B4C900A2DE15 /* Post.swift */,
 				845357372517BC9600A2DE15 /* Comment.swift */,
+				845357962517D87B00A2DE15 /* PostDetailed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				845357492517BFF900A2DE15 /* PostListUseCase.swift */,
+				8453579E2517D93F00A2DE15 /* PostDetailUseCase.swift */,
 				845357802517D43B00A2DE15 /* SetSelectedPostUseCase.swift */,
 			);
 			path = UseCases;
@@ -256,6 +266,8 @@
 		845357882517D74600A2DE15 /* PostDetail */ = {
 			isa = PBXGroup;
 			children = (
+				8453578C2517D79A00A2DE15 /* PostDetailViewController.swift */,
+				845357912517D7A700A2DE15 /* PostDetailViewController.xib */,
 			);
 			path = PostDetail;
 			sourceTree = "<group>";
@@ -417,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				845357442517BF4200A2DE15 /* PostListViewController.xib in Resources */,
+				845357922517D7A700A2DE15 /* PostDetailViewController.xib in Resources */,
 				84C3139225178BB300A1FFB2 /* LaunchScreen.storyboard in Resources */,
 				845357732517CDFA00A2DE15 /* PostListCell.xib in Resources */,
 				84C3138F25178BB300A1FFB2 /* Assets.xcassets in Resources */,
@@ -445,7 +458,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845357972517D87B00A2DE15 /* PostDetailed.swift in Sources */,
 				8453573F2517BF3400A2DE15 /* PostListViewController.swift in Sources */,
+				8453578D2517D79A00A2DE15 /* PostDetailViewController.swift in Sources */,
 				845357332517BC4C00A2DE15 /* CommentsProviderProtocol.swift in Sources */,
 				8453574A2517BFF900A2DE15 /* PostListUseCase.swift in Sources */,
 				845357122517B4C900A2DE15 /* Post.swift in Sources */,
@@ -464,6 +479,7 @@
 				845356CB2517A08900A2DE15 /* PostListProvider.swift in Sources */,
 				845356C425179CEF00A2DE15 /* Network.swift in Sources */,
 				845356F42517B23200A2DE15 /* CommentResponse.swift in Sources */,
+				8453579F2517D93F00A2DE15 /* PostDetailUseCase.swift in Sources */,
 				84C3138825178BB200A1FFB2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
