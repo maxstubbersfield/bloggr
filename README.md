@@ -7,6 +7,7 @@ The goal of this project is to demonstrate how a simple blogging app could work 
 From reading the requirements and given the time limit of 4 hours, it is clear that shortcuts need to be taken to have a working solution. I decided to focus on the architecture of the app as I think there are many interesting talking points about this. 
 
 I created a Whimsical drawing to figure out how I might solve this problem in CLEAN architecture and to get an understanding of the components that would be required and how they would fit together.
+![Alt text](bloggr.png?raw=true "Architecture plan")
 
 ### Architecture
 Breakdown of the architecture:
