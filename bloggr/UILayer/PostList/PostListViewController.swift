@@ -60,12 +60,11 @@ extension PostListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let post = posts[safe: indexPath.row], let cell = tableView.dequeueCell(withType: PostListCell.self, for: indexPath) as? PostListCell else {
+        guard let cell = tableView.dequeueCell(withType: PostListCell.self, for: indexPath) as? PostListCell else {
             return UITableViewCell()
         }
         
-        cell.setup(with: post)
+        cell.setup(with: posts[indexPath.row])
         return cell
     }
 }
@@ -74,17 +73,7 @@ extension PostListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let post = posts[safe: indexPath.row] else {
-            return
-        }
-        
-        dependencies.setSelectedPost(post)
+        dependencies.setSelectedPost(posts[indexPath.row])
         delegate?.postListViewControllerDidSelectPost(self)
-    }
-}
-
-private extension Collection {
-    subscript (safe index: Index) -> Element? {
-        return indices.contains(index) ? self[index] : nil
     }
 }
