@@ -13,12 +13,12 @@ class PostListCell: UITableViewCell {
         didSet {
             titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
             titleLabel.numberOfLines = 0
-            bodyLabel.textColor = .darkText
+            titleLabel.textColor = .darkText
         }
     }
     @IBOutlet weak var bodyLabel: UILabel! {
         didSet {
-            bodyLabel.textColor = .lightText
+            bodyLabel.textColor = .darkText
             bodyLabel.font = UIFont.systemFont(ofSize: 14)
             bodyLabel.numberOfLines = 3
         }
