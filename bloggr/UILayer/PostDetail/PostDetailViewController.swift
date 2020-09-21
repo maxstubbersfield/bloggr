@@ -19,6 +19,8 @@ final class PostDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
+            tableView.delegate = self
+            tableView.registerCell(type: CommentCell.self)
         }
     }
     
@@ -39,7 +41,6 @@ final class PostDetailViewController: UIViewController {
             case .success(let postDetailed):
                 self?.postDetailed = postDetailed
                 self?.setupHeaderView(for: postDetailed)
-                print(postDetailed)
             case .failure(let error):
                 self?.postDetailed = nil
                 // TODO: Handle error
@@ -61,11 +62,22 @@ final class PostDetailViewController: UIViewController {
 
 extension PostDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0 // TODO: Implement
+        return postDetailed?.comments.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell() // TODO: Implement
+        guard let comment = postDetailed?.comments[indexPath.row], let cell = tableView.dequeueCell(withType: CommentCell.self, for: indexPath) as? CommentCell else {
+            return UITableViewCell()
+        }
+        
+        cell.setup(with: comment)
+        return cell
+    }
+}
+
+extension PostDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return false
     }
 }
 
