@@ -19,3 +19,9 @@ Breakdown of the architecture:
 - `Network` - it is an oversimplified networking class which has been tailored purely for this project. It seemed to be the most lightweight solution for what was required.
 - No tests - the positive side of CLEAN architecture is that it enables tests of most components as each layer is separated by protocols this can be easily replaced with fake classes which can be used for testing. The down side of CLEAN architecure is that there is a lot of boilerplate code and there are many things to "wire up" and as a result I have not had enough time to show how the testing might be done!
 - UI - the user interface has really suffered and could be improved. Given the kind of app and the number of similar apps on the app store I hope that it isn't difficult to imagine how a better blogging app might look! :)
+
+### Possible future improvements
+- Add tests
+- Improve UI
+- Improve basic feature set to be able to search, filter and favourite posts.
+- Having an offline version, which updates at certain intervals could be a nice feature
