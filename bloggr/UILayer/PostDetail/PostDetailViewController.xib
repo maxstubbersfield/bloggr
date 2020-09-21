@@ -10,16 +10,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostDetailViewController" customModule="bloggr" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="qRQ-LY-oa7"/>
+                <outlet property="tableView" destination="EWt-I6-kMZ" id="Fp5-7R-ykx"/>
+                <outlet property="view" destination="X5I-XO-rrO" id="fbw-VV-Odj"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="X5I-XO-rrO">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EWt-I6-kMZ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="eIB-4w-H4K"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="138" y="77"/>
+            <constraints>
+                <constraint firstItem="EWt-I6-kMZ" firstAttribute="top" secondItem="eIB-4w-H4K" secondAttribute="top" id="6rW-Zd-ccv"/>
+                <constraint firstItem="EWt-I6-kMZ" firstAttribute="leading" secondItem="eIB-4w-H4K" secondAttribute="leading" id="AHM-fk-QFt"/>
+                <constraint firstItem="eIB-4w-H4K" firstAttribute="trailing" secondItem="EWt-I6-kMZ" secondAttribute="trailing" id="KEa-aI-wQz"/>
+                <constraint firstAttribute="bottomMargin" secondItem="EWt-I6-kMZ" secondAttribute="bottom" id="cCy-Rw-72L"/>
+            </constraints>
+            <point key="canvasLocation" x="-629" y="-751"/>
         </view>
     </objects>
     <resources>
