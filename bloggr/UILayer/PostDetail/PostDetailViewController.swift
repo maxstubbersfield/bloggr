@@ -55,8 +55,18 @@ final class PostDetailViewController: UIViewController {
         guard let headerView: PostDetailHeaderView = .fromNib() else {
             return // TODO: Handle error
         }
-        headerView.setup(with: postDetailed)
+        
+        headerView.translatesAutoresizingMaskIntoConstraints = false
         tableView.tableHeaderView = headerView
+        
+        headerView.setup(with: postDetailed)
+      
+        headerView.centerXAnchor.constraint(equalTo: tableView.centerXAnchor).isActive = true
+        headerView.widthAnchor.constraint(equalTo: tableView.widthAnchor).isActive = true
+        headerView.topAnchor.constraint(equalTo: tableView.topAnchor).isActive = true
+      
+        tableView.tableHeaderView?.layoutIfNeeded()
+        tableView.tableHeaderView = tableView.tableHeaderView
     }
 }
 
