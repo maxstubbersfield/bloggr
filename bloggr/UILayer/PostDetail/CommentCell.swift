@@ -26,7 +26,6 @@ class CommentCell: UITableViewCell {
     }
     @IBOutlet weak var bodyLabel: UILabel! {
         didSet {
-            bodyLabel.textColor = .lightText
             bodyLabel.font = UIFont.systemFont(ofSize: 14)
             bodyLabel.numberOfLines = 0
             bodyLabel.textColor = .darkText
