@@ -22,6 +22,7 @@ Breakdown of the architecture:
 
 ### Possible future improvements
 - Add tests
+- Add configuration file to store the URLs - could require `Network` to be extended.
 - Improve UI
 - Improve basic feature set to be able to search, filter and favourite posts.
-- Having an offline version, which updates at certain intervals could be a nice feature
+- Having an offline version, which updates at certain intervals could be a nice feature.
